@@ -25,6 +25,11 @@
         "twig/twig": "^1.0||^2.0"
     },
     "require": {
+        "ext-intl": "*",
+        "ext-mbstring": "*"
+    },  
+
+    "require": {
        "ext-pdo": "*",
     "ext-pdo_pgsql": "*",
     },
@@ -68,6 +73,19 @@
         },
         "sort-packages": true
     },
+
+    "extra": {
+        "heroku": {
+            "framework": "symfony2",
+            "document-root": "web",
+            "php-config": [
+                "date.timezone=Europe/Kiev",
+                "display_errors=off",
+                "short_open_tag=off"
+            ]
+        }
+    },
+
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
