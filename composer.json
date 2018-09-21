@@ -38,14 +38,7 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ],
 
-
-        "scripts": {
-            "compile": [
-                "app/console assetic:dump"
-            ]
-        },
-
-        "scripts": {
+       "scripts": {
                 "compile": [
                     "app/console assetic:dump"
                 ]
@@ -63,12 +56,8 @@
         ]
     },
     "config": {
-        "bin-dir": "bin",
-        "platform": {
-            "php": "5.6"
-        },
-        "sort-packages": true
-    },
+        "bin-dir": "bin"
+            },
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
@@ -83,10 +72,22 @@
                 "database_user": "DATABASE_USER",
                 "database_password": "DATABASE_PASSWORD"
                         }
-                                 },
-
-        "branch-alias": {
-            "dev-master": "2.7-dev"
         }
     }
+{
+    "extra": {
+        "heroku": {
+            "framework": "symfony2",
+            "document-root": "web",
+            "php-config": [
+                "date.timezone=Europe/Kiev",
+                "display_errors=off",
+                "short_open_tag=off"
+            ]
+        }
+    }
+}
+
+
+    
 }
