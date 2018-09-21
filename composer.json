@@ -24,19 +24,24 @@
         "symfony/symfony": "2.7.*",
         "twig/twig": "^1.0||^2.0"
     },
-    "require": {
-        "ext-intl": "*",
-        "ext-mbstring": "*"
-    },  
 
-    "require": {
-       "ext-pdo": "*",
-    "ext-pdo_pgsql": "*",
-    },
-    "require-dev": {
+     "require-dev": {
         "sensio/generator-bundle": "~2.3",
         "symfony/phpunit-bridge": "~2.7"
     },
+
+
+    "require": {
+        "ext-intl": "*",
+        "ext-mbstring": "*"
+    },    
+
+   
+   
+     "require": {
+         "ext-pdo": "*",
+         "ext-pdo_pgsql": "*",
+    }   ,
 
     "scripts": {
         "symfony-scripts": [
