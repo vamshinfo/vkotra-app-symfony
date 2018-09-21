@@ -45,13 +45,7 @@
             ]
         },
 
-        "scripts": {
-                "compile": [
-                    "app/console assetic:dump"
-                ]
-            },
-
-             "pre-install-cmd": [
+          "pre-install-cmd": [
             "HerokuDatabase::populateEnvironment"
         ],
 
