@@ -1,5 +1,5 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "vamshinfo/vkotra-app",
     "license": "MIT",
     "type": "project",
     "description": "The \"Symfony Standard Edition\" distribution",
@@ -37,6 +37,24 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ],
+
+
+        "scripts": {
+            "compile": [
+                "app/console assetic:dump"
+            ]
+        },
+
+        "scripts": {
+                "compile": [
+                    "app/console assetic:dump"
+                ]
+            },
+
+             "pre-install-cmd": [
+            "HerokuDatabase::populateEnvironment"
+        ],
+
         "post-install-cmd": [
             "@symfony-scripts"
         ],
@@ -56,8 +74,17 @@
         "symfony-web-dir": "web",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
-        },
+            "file": "app/config/parameters.yml",
+
+             "env-map": {
+                "database_host": "DATABASE_HOST",
+                "database_port": "DATABASE_PORT",
+                "database_name": "DATABASE_NAME",
+                "database_user": "DATABASE_USER",
+                "database_password": "DATABASE_PASSWORD"
+                        }
+                                 },
+
         "branch-alias": {
             "dev-master": "2.7-dev"
         }
