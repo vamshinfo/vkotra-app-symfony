@@ -17,3 +17,6 @@ class HerokuDatabase
         $io->write("DATABASE_URL=".getenv("DATABASE_URL"));
     }
 }
+
+
+        
