@@ -89,9 +89,8 @@
         },
         "heroku": {
             "framework": "symfony2"
-        }
+        },
 
-{
     "extra": {
         "heroku": {
             "framework": "symfony2",
@@ -103,11 +102,6 @@
             ]
         }
     }
-
-
-
-
-}
 
 
 
