@@ -1,0 +1,20 @@
+{
+  "name": "Heroku Deployment Application",
+  "description": "hdapp - example application for HOWTO",
+  "repository": "https://github.com/vamshinfo/vkotra-app-symfony",
+  "keywords": [
+    "symfony2", "heroku", "howto"
+  ],
+  "success_url": "/heroku",
+  "scripts": {
+    "postdeploy": "php app/console doctrine:schema:create"
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "env": {
+    "SYMFONY_ENV": {
+      "value": "prod"
+    }
+  }
+}
