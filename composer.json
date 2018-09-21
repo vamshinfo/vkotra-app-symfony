@@ -11,7 +11,6 @@
     "autoload-dev": {
         "files": [ "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php" ]
     },
-   
     "require": {
         "php": ">=5.3.9",
         "doctrine/doctrine-bundle": "~1.4",
@@ -24,29 +23,11 @@
         "symfony/swiftmailer-bundle": "~2.3,>=2.3.10",
         "symfony/symfony": "2.7.*",
         "twig/twig": "^1.0||^2.0"
-    }
-{
-     "require-dev": {
+    },
+    "require-dev": {
         "sensio/generator-bundle": "~2.3",
         "symfony/phpunit-bridge": "~2.7"
     },
-}
-
-{
-    "require": {
-        "ext-intl": "*",
-        "ext-mbstring": "*"
-    },    
-
- }  
-   {
-     "require": {
-         "ext-pdo": "*",
-         "ext-pdo_pgsql": "*",
-   }
-    },
-
-
     "scripts": {
         "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -64,7 +45,13 @@
             ]
         },
 
-          "pre-install-cmd": [
+        "scripts": {
+                "compile": [
+                    "app/console assetic:dump"
+                ]
+            },
+
+             "pre-install-cmd": [
             "HerokuDatabase::populateEnvironment"
         ],
 
@@ -82,19 +69,6 @@
         },
         "sort-packages": true
     },
-
-    "extra": {
-        "heroku": {
-            "framework": "symfony2",
-            "document-root": "web",
-            "php-config": [
-                "date.timezone=Europe/Kiev",
-                "display_errors=off",
-                "short_open_tag=off"
-            ]
-        }
-    },
-
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
