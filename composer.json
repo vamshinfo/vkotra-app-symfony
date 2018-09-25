@@ -22,7 +22,8 @@
         "symfony/monolog-bundle": "^3.0.2",
         "symfony/swiftmailer-bundle": "~2.3,>=2.3.10",
         "symfony/symfony": "2.7.*",
-        "twig/twig": "^1.0||^2.0"
+        "twig/twig": "^1.0||^2.0",
+        "symfony/apache-pack": "^1.0"
     },
 
 
@@ -53,18 +54,19 @@
 
              "pre-install-cmd": [
             "HerokuDatabase::populateEnvironment"
-        ],
+                    ],
 
-        "post-install-cmd": [
+            "post-install-cmd": [
             "@symfony-scripts"
-        ],
-        "post-update-cmd": [
+                    ],
+            "post-update-cmd": [
             "@symfony-scripts"
-        ]
-    },
+                    ]
+                },
     "config": {
         "bin-dir": "bin"
             },
+            
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
